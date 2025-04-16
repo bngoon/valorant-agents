@@ -34,7 +34,7 @@ A mobile-responsive web app that displays Valorant agents, their roles, and abil
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/valorant-agents.git
+git clone https://github.com/bgnoon/valorant-agents.git
 cd valorant-agents
 
 # Install dependencies
