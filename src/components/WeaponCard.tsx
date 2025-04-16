@@ -13,7 +13,7 @@ const WeaponCard = ({ weapon }: WeaponCardProps) => {
         className="w-full h-auto mb-2 rounded"
       />
       <h2 className="text-xl font-semibold">{weapon.name}</h2>
-      <p className="text-sm text-pink-400 mb-2">{weapon.category}</p>
+      <p className="text-sm text-pink-400 mb-2">{weapon.getCleanCategory()}</p>
       <p>{weapon.getStatsSummary()}</p>
       <p className="mt-1">
         💰 Cost: {weapon.cost ?? 'N/A'} —{' '}

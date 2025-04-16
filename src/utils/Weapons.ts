@@ -16,6 +16,11 @@ export class Weapon {
     isRifle(): boolean {
       return this.category.includes('Rifle');
     }
+
+    getCleanCategory(): string {
+      return this.category.split('::')[1] || this.category;
+    }
+    
   
     isHeavy(): boolean {
       return this.category.includes('Heavy');
