@@ -5,7 +5,8 @@ export class Weapon {
       public category: string,
       public fireRate: number | null,
       public magazineSize: number | null,
-      public cost: number | null
+      public cost: number | null,
+      public displayIcon: string
     ) {}
   
     isSidearm(): boolean {

@@ -16,10 +16,11 @@ export interface Agent {
   }
   
 
-export interface WeaponData {
+  export interface WeaponData {
     uuid: string;
     displayName: string;
     category: string;
+    displayIcon: string;         // ✅ Add this
     weaponStats: {
       fireRate: number;
       magazineSize: number;
