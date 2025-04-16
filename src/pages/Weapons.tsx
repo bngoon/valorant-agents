@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Weapon } from '../utils/Weapons'; // 📦 for typing the API data
 import { WeaponData } from '../types'; // 🔧 for creating class instances
-import {WeaponCard} from '../components/WeaponCard';
+import  WeaponCard  from '../components/WeaponCard';
 
 const Weapons = () => {
     const [weapons, setWeapons] = useState<Weapon[]>([]);
