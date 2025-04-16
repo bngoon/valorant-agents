@@ -15,3 +15,16 @@ export interface Agent {
     }[];
   }
   
+
+export interface WeaponData {
+    uuid: string;
+    displayName: string;
+    category: string;
+    weaponStats: {
+      fireRate: number;
+      magazineSize: number;
+    } | null;
+    shopData: {
+      cost: number;
+    } | null;
+  }
