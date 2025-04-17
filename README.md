@@ -19,8 +19,8 @@ A mobile-responsive web app that displays Valorant agents, their roles, and abil
 
 ## 🚀 Live Demo
 
-👉 [View on Netlify](https://your-netlify-link.netlify.app)  
-*(Add your live link once deployed)*
+👉 [View on Netlify](https://valproject.netlify.app/)  
+
 
 ## 📸 Screenshots
 

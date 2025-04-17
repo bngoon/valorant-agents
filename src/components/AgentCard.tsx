@@ -3,12 +3,15 @@ import { Agent } from '../types';
 interface AgentCardProps {
   agent: Agent;
   onClick: () => void;
+  selectable?: boolean;
+  manager?: any;
+  isMainAgent?: boolean;
 }
 
 const AgentCard = ({ agent, onClick }: AgentCardProps) => {
   return (
     <div
-      className="bg-gray-900 rounded-lg p-3 text-white cursor-pointer hover:bg-gray-700 transition"
+      className="bg-gray-900 rounded-lg p-3 text-white hover:bg-purple-700 transition cursor-pointer"
       onClick={onClick}
     >
       <img

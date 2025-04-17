@@ -4,18 +4,26 @@ import axios from 'axios';
 import { Agent } from '../types';
 import AgentDetail from '../components/AgentDetail';
 import { getAgentByIdURL } from '../utils/api';
+import { LoadoutManager } from '../utils/LoadoutManager';
 
 const AgentPage = () => {
     const navigate = useNavigate();
+    const manager = new LoadoutManager();
     const [agent, setAgent] = useState<Agent | null>(null);
     const { uuid } = useParams<{ uuid: string }>();
     const [loading, setLoading] = useState(true);
+
+
+    const handleSetMain = () => {
+      if (!agent) return;
+      manager.setAgent(agent.uuid);
+      alert(`${agent.displayName} selected as your main!`);
+      navigate('/weapons');
+    };
   
 
     useEffect(() => {
-
         if (!uuid) return;
-
         axios
       .get(getAgentByIdURL(uuid))
       .then((res) => {
@@ -37,11 +45,12 @@ const AgentPage = () => {
       }
 
     return (
-        <div className="p-4 bg-black min-h-screen text-white">
+        <div className="p-4 bg-black min-h-screen text-white pb-24">
             <button onClick={() => navigate(-1)} className="mb-4 text-sm underline text-gray-400 hover:text-white transition">
             ← Back
-            </button>
-            <AgentDetail agent={agent} />      
+            </button>   
+            <AgentDetail agent={agent} onSetMain={handleSetMain} />
+             
       </div>
     );
 }
