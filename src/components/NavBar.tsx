@@ -4,7 +4,7 @@ const NavBar = () => {
   const location = useLocation();
 
   const navItems = [
-    { label: 'Landing', path: '/' },
+    { label: 'Home', path: '/' },
     { label: 'Agents', path: '/agents' },
     { label: 'Weapons', path: '/weapons' },
     { label: 'Loadout', path: '/loadout' },
