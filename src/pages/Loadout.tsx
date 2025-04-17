@@ -43,7 +43,7 @@ const Loadout = () => {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen text-white p-4">
+    <div className="bg-black min-h-screen text-white px-4 py-6">
       <h1 className="text-3xl font-bold mb-6">My Loadout</h1>
       {weapons.length === 0 ? (
         <p className="text-gray-400">No weapons in loadout.</p>
@@ -57,7 +57,7 @@ const Loadout = () => {
       {weapons.length > 0 && (
         <button
           onClick={handleClear}
-          className="mt-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded"
+          className="mt-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded pb-10 mb-5"
         >
           Clear Loadout & Return to Agents
         </button>

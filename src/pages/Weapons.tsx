@@ -31,7 +31,7 @@ const Weapons = () => {
     }, []);
   
     return (
-      <div className="bg-black min-h-screen text-white p-4">
+      <div className="bg-black min-h-screen text-white p-4 pb-48">
         <h1 className="text-3xl font-bold mb-6">Weapons</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {weapons.map((weapon) => (

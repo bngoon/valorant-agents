@@ -19,7 +19,7 @@ const WeaponCard = ({ weapon, manager, hideAddButton }: WeaponCardProps) => {
   };
 
   return (
-    <div className="bg-gray-800 rounded p-4">
+    <div className="bg-gray-800 rounded-lg p-4 text-white w-full">
       <img src={weapon.displayIcon} alt={weapon.name} className="w-full h-auto mb-2 rounded" />
       <h2 className="text-xl font-semibold">{weapon.name}</h2>
       <p className="text-sm text-pink-400 mb-2">{weapon.getCleanCategory()}</p>
@@ -31,7 +31,7 @@ const WeaponCard = ({ weapon, manager, hideAddButton }: WeaponCardProps) => {
       {!hideAddButton && (
         <button
             onClick={handleAddToLoadout}
-            className='mt-2 bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded text-white font-semibold'
+            className='bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded text-white font-semibold w-full'
         >
             Add to Loadout
         </button>
