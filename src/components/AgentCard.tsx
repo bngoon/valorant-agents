@@ -1,4 +1,4 @@
-import { Agent } from '../types';
+import { Agent } from "../types";
 
 interface AgentCardProps {
   agent: Agent;
