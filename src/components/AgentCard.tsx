@@ -8,6 +8,7 @@ interface AgentCardProps {
   isMainAgent?: boolean;
 }
 
+
 const AgentCard = ({ agent, onClick }: AgentCardProps) => {
   return (
     <div

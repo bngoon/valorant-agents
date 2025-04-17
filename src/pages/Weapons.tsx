@@ -21,7 +21,8 @@ const Weapons = () => {
             w.weaponStats?.fireRate ?? null,
             w.weaponStats?.magazineSize ?? null,
             w.shopData?.cost ?? null,
-            w.displayIcon
+            w.displayIcon,
+            w.weaponStats?.firstBulletAccuracy ?? null
           );
         });
         setWeapons(weaponList);

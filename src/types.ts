@@ -20,10 +20,11 @@ export interface Agent {
     uuid: string;
     displayName: string;
     category: string;
-    displayIcon: string;         // ✅ Add this
+    displayIcon: string;   
     weaponStats: {
       fireRate: number;
       magazineSize: number;
+      firstBulletAccuracy?: number;
     } | null;
     shopData: {
       cost: number;

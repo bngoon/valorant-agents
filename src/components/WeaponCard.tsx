@@ -8,7 +8,7 @@ interface WeaponCardProps {
   
 }
 
-const WeaponCard = ({ weapon, manager, hideAddButton }: WeaponCardProps) => {
+const WeaponCard = ({ weapon, manager, hideAddButton, }: WeaponCardProps) => {
   const handleAddToLoadout = () => {
     const added = manager.addWeapon(weapon.uuid);
     if (!added) {
@@ -23,6 +23,7 @@ const WeaponCard = ({ weapon, manager, hideAddButton }: WeaponCardProps) => {
       <img src={weapon.displayIcon} alt={weapon.name} className="w-full h-auto mb-2 rounded" />
       <h2 className="text-xl font-semibold">{weapon.name}</h2>
       <p className="text-sm text-pink-400 mb-2">{weapon.getCleanCategory()}</p>
+      <p className="text-sm mt-1">🎯 First Shot Accuracy: {weapon.getFirstBulletAccuracy()}</p>
       <p>{weapon.getStatsSummary()}</p>
       <p className="mt-1">
         💰 Cost: {weapon.cost ?? 'N/A'} —{" "}

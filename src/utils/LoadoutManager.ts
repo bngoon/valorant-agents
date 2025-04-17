@@ -43,6 +43,7 @@ export class LoadoutManager {
       this.loadout = JSON.parse(stored);
     }
   }
+  
   private selectedAgent: string | null = null;
 
   setAgent(uuid: string) {

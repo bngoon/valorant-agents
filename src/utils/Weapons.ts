@@ -6,7 +6,8 @@ export class Weapon {
       public fireRate: number | null,
       public magazineSize: number | null,
       public cost: number | null,
-      public displayIcon: string
+      public displayIcon: string,
+      public firstBulletAccuracy: number | null,
     ) {}
   
     isSidearm(): boolean {
@@ -20,14 +21,18 @@ export class Weapon {
     getCleanCategory(): string {
       return this.category.split('::')[1] || this.category;
     }
-    
+
+    getFirstBulletAccuracy(): string {
+      return this.firstBulletAccuracy !== null ? `${this.firstBulletAccuracy}` : 'N/A';
+    }
   
     isHeavy(): boolean {
       return this.category.includes('Heavy');
     }
+    
   
     getStatsSummary(): string {
-      return `🔥 ${this.fireRate ?? 'N/A'} rounds/sec, 🧱 ${this.magazineSize ?? 'N/A'} rounds`;
+      return `🔥 ${this.fireRate ?? 'N/A'} rounds/sec, 🧱 ${this.magazineSize ?? 'N/A'} rounds `;
     }
   
     isBudgetFriendly(): boolean {
