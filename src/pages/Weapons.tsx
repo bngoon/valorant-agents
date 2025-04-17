@@ -9,6 +9,8 @@ const Weapons = () => {
   const [weapons, setWeapons] = useState<Weapon[]>([]);
   const manager = new LoadoutManager(2);
 
+
+  /*Fetch all weapons*/ 
   useEffect(() => {
     axios
       .get(getAllWeaponsURL())

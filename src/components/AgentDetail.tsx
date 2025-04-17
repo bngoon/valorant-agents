@@ -2,7 +2,7 @@ import { Agent } from "../types";
 
 interface AgentDetailProps {
   agent: Agent;
-  onSetMain: () => void;
+  onSetMain: () => void; 
 }
 
 const AgentDetail = ({ agent, onSetMain }: AgentDetailProps) => {
