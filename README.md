@@ -5,15 +5,24 @@ A mobile-responsive web app that displays Valorant agents, their roles, and abil
 ## 🔍 Features
 
 - 🎯 Browse all playable Valorant agents
-- 📱 Fully mobile responsive layout
-- 🧠 View detailed role and abilities per agent
+- 📖 View detailed roles and abilities per agent
+- 🛡 Select a main agent
+- 🔫 Choose 2 weapons and view your custom loadout
+- 🧹 Clear loadout and restart flow
+- 📱 Fully mobile-responsive layout
 - ⚡ Built with Vite + React + Tailwind CSS
 
+## 🔗 Valorant API Endpoints Used
+
+- **All Agents**: `https://valorant-api.com/v1/agents?isPlayableCharacter=true`
+- **Agent by UUID**: `https://valorant-api.com/v1/agents/{uuid}`
+- **All Weapons**: `https://valorant-api.com/v1/weapons`
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React, Vite, Tailwind CSS
+- **Frontend**: React, Vite, TypeScript, Tailwind CSS
 - **Routing**: React Router
+- **State/Storage**: LocalStorage + custom LoadoutManager
 - **API**: [Valorant API](https://valorant-api.com/)
 - **Deployment**: Netlify
 
@@ -24,10 +33,9 @@ A mobile-responsive web app that displays Valorant agents, their roles, and abil
 
 ## 📸 Screenshots
 
-| Landing Page | Agent List | Agent Detail |
-|--------------|------------|--------------|
-| ![landing](./screenshots/landing.png) | ![list](./screenshots/list.png) | ![detail](./screenshots/detail.png) |
-
+| Landing Page | Agent List | Agent Detail | Weapons | Loadout |
+|--------------|------------|---------------|---------|---------|
+| ![landing](./screenshots/landing.png) | ![list](./screenshots/list.png) | ![detail](./screenshots/detail.png) | ![weapons](./screenshots/weapons.png) | ![loadout](./screenshots/loadout.png) |
 
 
 ## 🧩 Getting Started (Local Setup)
