@@ -16,7 +16,7 @@ const Loadout = () => {
   const navigate = useNavigate();
 
   const handleClear = () => {
-    manager.clearLoadout(); // ← use your existing method
+    manager.clearLoadout(); 
     navigate("/agents");
   };
 
