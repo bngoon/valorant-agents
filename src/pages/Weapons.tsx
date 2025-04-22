@@ -5,6 +5,7 @@ import { WeaponData } from "../types"; //  for creating class instances
 import WeaponCard from "../components/WeaponCard";
 import { LoadoutManager } from "../utils/LoadoutManager";
 import { getAllWeaponsURL } from "../utils/api";
+import {toast} from "react-hot-toast";
 const Weapons = () => {
   const [weapons, setWeapons] = useState<Weapon[]>([]);
   const manager = new LoadoutManager(2);
@@ -29,7 +30,7 @@ const Weapons = () => {
         });
         setWeapons(weaponList);
       })
-      .catch(console.error);
+      .catch(toast.error);
   }, []);
 
   return (

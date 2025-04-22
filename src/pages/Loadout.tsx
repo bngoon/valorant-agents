@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { getAllWeaponsURL } from "../utils/api";
 import { Agent } from "../types";
 import { getAgentByIdURL } from "../utils/api";
+import {toast} from "react-hot-toast";
 
 const Loadout = () => {
   const [weapons, setWeapons] = useState<Weapon[]>([]);
@@ -57,7 +58,7 @@ const Loadout = () => {
 
         setWeapons(loadedWeapons);
       })
-      .catch(console.error);
+      .catch(toast.error);
   }, []);
 
   return (

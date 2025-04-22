@@ -5,6 +5,7 @@ import AgentPage from './pages/AgentPage';
 import Weapons from './pages/Weapons';
 import Loadout from './pages/Loadout';
 import NavBar from './components/NavBar';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/loadout" element={<Loadout />} />
       </Routes>
       <NavBar />
+      <Toaster position="top-right" reverseOrder={false} />
     </BrowserRouter>
   );
 };

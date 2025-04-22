@@ -5,6 +5,7 @@ import { Agent } from '../types';
 import AgentDetail from '../components/AgentDetail';
 import { getAgentByIdURL } from '../utils/api';
 import { LoadoutManager } from '../utils/LoadoutManager';
+import {toast} from 'react-hot-toast';
 
 const AgentPage = () => {
     const navigate = useNavigate();
@@ -17,7 +18,7 @@ const AgentPage = () => {
     const handleSetMain = () => {
       if (!agent) return;
       manager.setAgent(agent.uuid);
-      alert(`${agent.displayName} selected as your main!`);
+      toast.success(`${agent.displayName} selected as your main!`);
       navigate('/weapons');
     };
   
@@ -31,7 +32,7 @@ const AgentPage = () => {
         setLoading(false);
       })
       .catch((err) => {
-        console.error('Failed to fetch agent:', err);
+        toast.error('Failed to fetch agent:', err);
         setLoading(false);
       });
     }, [uuid]);

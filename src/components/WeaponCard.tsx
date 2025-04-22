@@ -1,5 +1,6 @@
 import { Weapon } from '../utils/Weapons';
 import { LoadoutManager } from '../utils/LoadoutManager';
+import { toast } from 'react-hot-toast';
 
 interface WeaponCardProps {
   weapon: Weapon;
@@ -12,9 +13,9 @@ const WeaponCard = ({ weapon, manager, hideAddButton, }: WeaponCardProps) => {
   const handleAddToLoadout = () => {
     const added = manager.addWeapon(weapon.uuid);
     if (!added) {
-      alert("Loadout full or already added!");
+      toast.success("Loadout full or already added!");
     } else {
-      alert(`${weapon.name} added to your loadout!`);
+      toast(`${weapon.name} added to your loadout!`);
     }
   };
 
