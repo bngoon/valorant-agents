@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Weapon } from "../utils/Weapons"; // 📦 for typing the API data
-import { WeaponData } from "../types"; // 🔧 for creating class instances
+import { Weapon } from "../utils/Weapons"; //  for typing the API data
+import { WeaponData } from "../types"; //  for creating class instances
 import WeaponCard from "../components/WeaponCard";
 import { LoadoutManager } from "../utils/LoadoutManager";
 import { getAllWeaponsURL } from "../utils/api";

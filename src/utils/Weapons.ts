@@ -19,7 +19,7 @@ export class Weapon {
     }
 
     getCleanCategory(): string {
-      return this.category.split('::')[1] || this.category;
+      return this.category.split('::')[1] || this.category; 
     }
 
     getFirstBulletAccuracy(): string {

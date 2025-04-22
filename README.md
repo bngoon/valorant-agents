@@ -50,3 +50,16 @@ npm install
 
 # Start dev server
 npm run dev
+```
+
+## 🧩 Component Hierarchy Diagram
+
+This diagram shows how the components in the app are structured, including pages, reusable components, and navigation flow.
+
+![Component Hierarchy Diagram](./screenshots/CHD.png)
+
+## 🗃️ Entity-Relationship Diagram (ERD)
+
+This diagram outlines the data relationships between agents, weapons, abilities, and loadouts.
+
+![Entity-Relationship Diagram](./screenshots/ERD.png)
