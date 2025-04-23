@@ -18,6 +18,7 @@ const Loadout = () => {
 
   const handleClear = () => {
     manager.clearLoadout(); 
+    manager.clearAgent();
     navigate("/agents");
   };
 
