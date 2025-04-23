@@ -20,7 +20,7 @@ const WeaponCard = ({ weapon, manager, hideAddButton, }: WeaponCardProps) => {
   };
 
   return (
-    <div className="bg-gray-800 rounded-lg p-4 text-white w-full">
+    <div className="bg-gray-800 rounded-lg p-4 text-white w-full hover:bg-gray-700">
       <img src={weapon.displayIcon} alt={weapon.name} className="w-full h-auto mb-2 rounded" />
       <h2 className="text-xl font-semibold">{weapon.name}</h2>
       <p className="text-sm text-pink-400 mb-2">{weapon.getCleanCategory()}</p>

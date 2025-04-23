@@ -16,6 +16,9 @@ const Loadout = () => {
   const [agent, setAgent] = useState<Agent | null>(null);
   const navigate = useNavigate();
 
+  /**
+   * Resets the loadout manager and navigates to the agent selection page.
+   */
   const handleClear = () => {
     manager.clearLoadout(); 
     manager.clearAgent();
@@ -32,6 +35,7 @@ const Loadout = () => {
       .catch(console.error);
   }, []);
 
+  // get the weapons from the API and create class instances
   useEffect(() => {
     const loadoutIds = manager.getLoadout();
 
@@ -63,7 +67,7 @@ const Loadout = () => {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen text-white px-4 py-6">
+    <div className="bg-gray-900  min-h-screen text-white px-4 py-6">
       {agent && (
         <div className="text-center mb-6">
           <img

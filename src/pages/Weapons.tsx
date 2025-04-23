@@ -11,7 +11,7 @@ const Weapons = () => {
   const manager = new LoadoutManager(2);
 
 
-  /*Fetch all weapons*/ 
+  /*  get all weapons from the API and create class instances from the data */ 
   useEffect(() => {
     axios
       .get(getAllWeaponsURL())
