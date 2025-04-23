@@ -5,6 +5,7 @@ interface AgentDetailProps {
   onSetMain: () => void; 
 }
 
+// AgentDetail component passing agent and onSetMain props
 const AgentDetail = ({ agent, onSetMain }: AgentDetailProps) => {
   return (
     <div className="text-white">

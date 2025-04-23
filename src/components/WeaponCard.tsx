@@ -8,7 +8,7 @@ interface WeaponCardProps {
   hideAddButton?: boolean;
   
 }
-
+// A clickable card representing a weapon. passing weapon and onClick props and manager
 const WeaponCard = ({ weapon, manager, hideAddButton, }: WeaponCardProps) => {
   const handleAddToLoadout = () => {
     const added = manager.addWeapon(weapon.uuid);

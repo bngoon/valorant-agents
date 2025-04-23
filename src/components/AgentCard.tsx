@@ -1,5 +1,8 @@
 import { Agent } from "../types";
 
+
+// Using interface to define expected props structure.
+
 interface AgentCardProps {
   agent: Agent;
   onClick: () => void;
@@ -8,7 +11,7 @@ interface AgentCardProps {
   isMainAgent?: boolean;
 }
 
-
+// AgentCard component passing agent and onClick props
 const AgentCard = ({ agent, onClick }: AgentCardProps) => {
   return (
     <div
