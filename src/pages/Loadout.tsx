@@ -13,7 +13,7 @@ import {toast} from "react-hot-toast";
 const Loadout = () => {
   const [weapons, setWeapons] = useState<Weapon[]>([]);
   const manager = new LoadoutManager(2);
-  const [agent, setAgent] = useState<Agent | null>(null);
+  const [agent, setAgent] = useState<Agent | null>(null); // store the selected agent or null before it is fetched
   const navigate = useNavigate();
 
   /**
